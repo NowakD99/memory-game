@@ -61,7 +61,7 @@ function Game() {
       }
       else {
         fieldsActivation(i / 2, table)
-        await timer(1000)
+        await timer(500)
       }
     }
   }
@@ -71,7 +71,7 @@ function Game() {
     for (var i = 0; i < 2; i++) {
       if (i === 0) {
         fieldActivation(0, [nr])
-        await timer(1000)
+        await timer(500)
       }
       else {
         dispatch({ type: 'setActiveField', payloadField: 0 })
@@ -111,7 +111,7 @@ function Game() {
           setTimeout(function () {
             dispatch({ type: 'playerBoardLast', payloadplayerBoard: [], payloadRound: round + 1 })
             showFields(computerBoard, round + 1)
-          }, 1000)
+          }, 500)
         }
         dispatch({ type: 'playerBoard', payloadplayerBoard: [...playerBoard, e] })
       }
@@ -119,7 +119,7 @@ function Game() {
       setTimeout(function () {
         dispatch({ type: 'playerBoardFailed' })
         showFields(computerBoard, round)
-      }, 1000)
+      }, 500)
     }
   }
 
