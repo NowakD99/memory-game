@@ -11,3 +11,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.boards,
+.round {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.boards h1 {
+  width: 50%;
+}
+
+.computerBoard,
+.playerBoard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  border: 5px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 10px;
+  padding: 5px 0px;
+}
+
+.computerField,
+.playerField {
+  width: 20%;
+  height: 20%;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.playerField {
+  cursor: pointer;
+}
+
+.computerField.active {
+  background-color: rgb(57, 179, 255);
+}
+
+.playerField.active {
+  background-color: rgb(82, 255, 82);
+}
+
+.computerBoard.active,
+.playerBoard.active {
+  border: 5px solid blue;
+}
+
+.header,
+.information {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.information {
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btn {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 3px 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.select {
+  line-height: 29px;
+}
